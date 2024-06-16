@@ -10,8 +10,8 @@ router.get('/me', async (req, res) => {
   res.send(await User.findById(user._id));
 });
 
-router.post('/v123/signup', registerUser);
-router.post('/v123/signin', loginUser);
+router.post('/v1/signup', registerUser);
+router.post('/v1/signin', loginUser);
 
 
 module.exports = router;

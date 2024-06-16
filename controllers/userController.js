@@ -60,7 +60,7 @@ const loginUser = asyncHandler(async (req, res) => {
     const user = result.rows[0];
 
     
-    // daki mayella ulach l utilisateur nni negh mdp faux amd yerr l err sinon le json nni ukessar
+    // daki mayella ulach l utilisateur nni negh mdp faux ad yerr l err sinon le json nni ukessar
     if (!user || !(await bcrypt.compare(password, user.password))) {
       res.status(401).json({ error: 'Invalid identifier or password' });
     } else {
